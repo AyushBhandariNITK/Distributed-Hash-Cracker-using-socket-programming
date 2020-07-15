@@ -13,17 +13,12 @@
 #define PORT 8888
 
 
-
 // compare function
  
 bool compare1(char msg[], char buffer[])
 {
     return memcmp( buffer, msg, strlen(msg) ) == 0;
 }   
-
-
-
-
 
 
 // Functions to convert int number to any base string                   
@@ -75,10 +70,6 @@ char* fromDeci(char res[], int base, long inputNum)
   
     return res; 
 }   
-  
-  
-  
-  
   
   
  //print range function
@@ -146,47 +137,10 @@ int main(int argc, char **argv)
     hash[a] ='\0';
   
     
-    
- 
     for(int i =0; i<6; i++) {
         requestPacket(sendBuffer, "firstPacket", receiveBuffer, serverfd, hash);
         
     }
-    
-    
-         
-    
+           
 }
 
-
-
-
-
-
-
-// while(1)
-    // {
-    //     read(serverfd, receiveBuffer, 80);
-        
-    //     printf("%s\n",receiveBuffer);
-    //  }     
-    
-    
-    
-    
-       // sprintf(sendBuffer, "firstPacket");
-    // write(serverfd, sendBuffer, sizeof(sendBuffer));
-    // read(serverfd, receiveBuffer, 80);
-    // printf("%s\n",receiveBuffer);
-    
-    
-    // sprintf(sendBuffer, "secondPacket");
-    // write(serverfd, sendBuffer, sizeof(sendBuffer));
-    // read(serverfd, receiveBuffer, 80);
-    // printf("%s\n",receiveBuffer);
-    
-    
-    // sprintf(sendBuffer, "thirdPacket");
-    // write(serverfd, sendBuffer, sizeof(sendBuffer));
-    // read(serverfd, receiveBuffer, 80);
-    // printf("%s\n",receiveBuffer);
